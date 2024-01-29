@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Mozzilla">
+    <title>Mozzilla Splash Page</title>
 </head>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <style>
@@ -134,14 +135,17 @@
            src="firefoxaddons400.jpg" alt = "The firefox puzzle"> 
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img src="mdn.svg" alt="Blue background Dinosaur">
+          <img src="mdn.svg" alt="Blue background dinosaur">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        
         <!-- insert picture element -->
+        <picture>
+          <source media="(max-width: 600px)" srcset="red-panda600.jpg">
+          <img src="red-panda1200.jpg" alt="a red panda">
+        </picture>
       </div>
 
     </main>
