@@ -100,7 +100,7 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <img src="firefox_logo-only_RGB.png" alt="Firefox logo">
+      <img src="firefoxlogo400.png" alt="Firefox logo">
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
 
@@ -121,21 +121,26 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img srcset ="firefox_logo-only_RGB-400.png 400w, "  alt = "The Firefox logo" >
+          <img 
+          srcset = "firefoxlogo400.png 400w, firefoxlogo120.png 120w" sizes="(max-width: 500px) 120px, 400px"  src="firefoxlogo400.png"
+          alt = "The Firefox logo" >
         </a>
         <a href="https://www.mozilla.org/">
-          <img src="mozilla-dinosaur-head-400.png" alt = " The Dinosaur head">
+          <img srcset="mozilladinosaur400.png 400w, mozilladinosaur120.png 120w" sizes="(max-width: 500px) 120px, 400px"
+          src="mozilladinosaur400.png" alt = " The Dinosaur head">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="firefox-addons-400.jpg" alt = "The firefox puzzle">
+          <img  srcset = "firefoxaddons400.jpg 400w, firefoxaddons120.jpg 120w" sizes = "(max-width: 500px) 120px, 400px"
+           src="firefoxaddons400.jpg" alt = "The firefox puzzle"> 
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img src="mdn.svg">
+          <img src="mdn.svg" alt="Blue background Dinosaur">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
+        
         <!-- insert picture element -->
       </div>
 
