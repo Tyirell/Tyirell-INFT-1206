@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Class-Notes/CSS/Responsive-Design"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Assignment-3-part-1"
+	}
+}
