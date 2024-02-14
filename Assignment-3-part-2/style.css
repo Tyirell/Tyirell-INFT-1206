@@ -5,9 +5,16 @@ html {
   /* Your CSS below here */
 div{
     /* Position of Box */
-    width: 200px;
-    height: 150px;
+    width: 400px;
+    height: 350px;
     margin: auto;
-    text-align: center;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    text-align:center ;
     border: 2px solid red;
+
+    /* ?Font Size */
+    font-size: 1.3em;
+    background-color: red;
 }
