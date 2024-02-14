@@ -3,4 +3,11 @@ html {
   }
   
   /* Your CSS below here */
-
+div{
+    /* Position of Box */
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid red;
+}
