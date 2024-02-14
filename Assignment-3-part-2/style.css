@@ -12,9 +12,13 @@ div{
     justify-content: center;
     align-items: center;
     text-align:center ;
-    border: 2px solid red;
 
-    /* ?Font Size */
+
+    /* Font Size */
     font-size: 1.3em;
+    color: black;
+    text-shadow: 1px 1px 3px black;
     background-color: red;
+    border-radius: 25px 25px 25px 25px;
+    border: 1px solid darkred;
 }
