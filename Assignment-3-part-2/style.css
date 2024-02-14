@@ -16,9 +16,10 @@ div{
 
     /* Font Size */
     font-size: 1.3em;
-    color: black;
+    color: white;
     text-shadow: 1px 1px 3px black;
     background-color: red;
     border-radius: 25px 25px 25px 25px;
     border: 1px solid darkred;
+    background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.2) 30% ,rgba(0, 0, 0, 0.2) 30%);
 }
