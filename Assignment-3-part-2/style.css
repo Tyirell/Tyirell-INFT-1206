@@ -15,7 +15,8 @@ div{
 
 
     /* Font Properties */
-    font-size: 1.4em;
+    /* In order to figure this value I assumed that the default size for text is 16px. Since every pixel is 1em then you divide the size given 17 by the base font size 16. This means that the font size is 1.0625em */
+    font-size: 1.0625em;
     color: white;
     text-shadow: 1px 1px 3px black;
 
