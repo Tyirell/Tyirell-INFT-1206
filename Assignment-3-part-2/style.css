@@ -14,12 +14,18 @@ div{
     text-align:center ;
 
 
-    /* Font Size */
+    /* Font Properties */
     font-size: 1.3em;
     color: white;
     text-shadow: 1px 1px 3px black;
+
+
+    /* Box Properties */
     background-color: red;
     border-radius: 25px 25px 25px 25px;
     border: 1px solid darkred;
     background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.2) 30% ,rgba(0, 0, 0, 0.2) 30%);
+    box-shadow: 5px 5px 5px black, 10px 10px 5px rgba(237, 232, 232, 0.4) inset,-10px -10px 5px rgba(0, 0, 0, 0.2) inset;
+
+
 }
