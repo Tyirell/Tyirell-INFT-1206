@@ -26,18 +26,32 @@ body {
   nav {
     background-color: #000;
     padding: .5em;
+    position: sticky;
+    top: 0;
+    
+    
+    
+
   }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    
+    
   }
   
   nav a {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
+    
   }
   
   .photos {
