@@ -20,14 +20,13 @@ function randomRGB() {
 
 
 //Class for the ball
-class Ball {
-  constructor(x ,y ,velX ,velY ,color ,size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
+class Ball extends Shape {
+  constructor(color ,size, exists) {
+    super(x, y, velX, velY)
     this.color = color;
     this.size = size;
+    this.exists = true
+
   }
   //Allows the ball to draw itself on the screen
   draw() {
@@ -83,6 +82,18 @@ testBall.x
 testBall.size
 testBall.color
 testBall.draw();
+
+
+// Shape Class
+
+class Shape {
+  constructor(x, y, velX, velY) {
+  this.x = x;
+  this.y = y;
+  this.velX = velX
+  this.velY = velY
+  }
+}
 
 //Setting up how mnay balls can appear on the screen and the boundaries they have to follow to stay inside the rectangle
 const balls = []
