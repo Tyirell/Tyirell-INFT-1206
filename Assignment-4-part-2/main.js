@@ -18,7 +18,7 @@ const alternative = {
     'pic4': "Ancient Ruins",
     'pic5': "Insect on a Leaf",
 }
-console.log(alternative["pic1"])
+
 /* Looping through images */
 for (let i = 1; i <= filenames.length; i++ ) {
     let imageLocation = `images/pic${i}.jpg`
@@ -30,7 +30,7 @@ for (let i = 1; i <= filenames.length; i++ ) {
     thumbBar.appendChild(newImage);
 
 
-newImage.addEventListener("click",locate => {
+    newImage.addEventListener("click",locate => {
     displayedImage.src = locate.target.src;
     displayedImage.alt = locate.target.alt;
 
