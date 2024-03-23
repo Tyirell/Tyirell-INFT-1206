@@ -18,8 +18,9 @@ const alternative = {
     'pic4': "Ancient Ruins",
     'pic5': "Insect on a Leaf",
 }
+console.log(alternative["pic1"])
 /* Looping through images */
-for (let i = 1; i <= filenames.length(); i++ ) {
+for (let i = 1; i <= filenames.length; i++ ) {
     let imageLocation = `images/pic${i}.jpg`
     let alttext = alternative['pic'+ [i]]
 
@@ -40,7 +41,18 @@ newImage.addEventListener("click",locate => {
 
 
 /* Wiring up the Darken/Lighten button */
-btn.getAttribute("class")
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+
+btn.addEventListener("click", () => {
+    currentAtrribute = btn.getAttribute("class")
+    if (currentAtrribute === ("dark")){
+        btn.setAttribute("class", "light");
+        btn.textContent = 'Lighten';
+        overlay.style.backgroundColor = "rgb(0 0 0 / 50%)";
+    } else {
+        btn.setAttribute("class", "dark");
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0%)";
+    }
+})
+          
+
