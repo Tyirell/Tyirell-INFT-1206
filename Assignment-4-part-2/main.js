@@ -19,16 +19,28 @@ const alternative = {
     'pic5': "Insect on a Leaf",
 }
 /* Looping through images */
-for (let i = 1; i < filenames.length(); i++ ) {
-const newImage = document.createElement('img');
-newImage.setAttribute('src', imageLocation);
-newImage.setAttribute('alt', alttext);
-thumbBar.appendChild(newImage);
+for (let i = 1; i <= filenames.length(); i++ ) {
+    let imageLocation = `images/pic${i}.jpg`
+    let alttext = alternative['pic'+ [i]]
 
-let imageLocation = `images/pic${i}.jpg`
-let alttext = alternative.pic`${i}`
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', imageLocation);
+    newImage.setAttribute('alt', alttext);
+    thumbBar.appendChild(newImage);
 
 
+newImage.addEventListener("click",locate => {
+    displayedImage.src = locate.target.src;
+    displayedImage.alt = locate.target.alt;
 
+
+});
 }
+
+
+
 /* Wiring up the Darken/Lighten button */
+btn.getAttribute("class")
+btn.setAttribute("class", xxx);
+btn.textContent = xxx;
+overlay.style.backgroundColor = xxx;
