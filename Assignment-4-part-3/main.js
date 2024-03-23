@@ -17,3 +17,20 @@ function random(min, max) {
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+
+
+//Class for the ball
+class Ball {
+  constructor(x ,y ,velX ,velY ,color ,size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
+  draw() {
+    
+  }
+  
+}
