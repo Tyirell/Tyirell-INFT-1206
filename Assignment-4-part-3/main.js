@@ -29,13 +29,14 @@ class Ball {
     this.color = color;
     this.size = size;
   }
+  //Allows the ball to draw itself on the screen
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 *Math.PI);
     ctx.fill();
   }
-
+  // Updates each ball to so they can move around the screen
   update() {
     if((this.x + this.size) >= width) {
       this.velX = -(this.velX);
@@ -57,6 +58,7 @@ class Ball {
     this.y += this.velY
 
   }
+  //Detects if any of the balls have collided
   collisionDetect() {
     for (const ball of balls) {
       if (this !== ball) {
@@ -74,13 +76,15 @@ class Ball {
 
   
 }
+
+//Testing the ball
 const testBall = new Ball(50, 100, 4, 4, "blue", 10)
 testBall.x
 testBall.size
 testBall.color
 testBall.draw();
 
-
+//Setting up how mnay balls can appear on the screen and the boundaries they have to follow to stay inside the rectangle
 const balls = []
 
 while(balls.length < 25) {
@@ -97,7 +101,7 @@ while(balls.length < 25) {
   balls.push(ball)
 }
 
-
+// A loop that updates each ball, draws them and detects if any of them have collided
 function loop() {
   ctx.fillStyle = 'rgb(0 0 0 / 25%)'
 
