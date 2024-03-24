@@ -4,12 +4,13 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 //Reference Variable
+//Selects the paragraph in the HTML document and allows editing of the text
 const paragraph = document.querySelector("p")
 
 
 
 
-
+//Sets the cavas width and height
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -28,6 +29,7 @@ function randomRGB() {
 // Shape Class
 
 class Shape {
+  //Defines constructors in shape class
   constructor(x, y, velX, velY) {
     this.x = x;
     this.y = y;
@@ -92,14 +94,14 @@ class Ball extends Shape {
 
   
 }
-
+//Creates a class for the "evil" or enemy ball
 class EvilCircle extends Shape{
   constructor(x, y){
     super(x, y, 20, 20);
 
     this.color = "white"
     this.size = 10
-
+    //Adds key functionality for your evil enemy so you can move him around
     window.addEventListener("keydown", (e) => {
       switch (e.key) {
         case "a":
@@ -111,9 +113,13 @@ class EvilCircle extends Shape{
         case "w":
           this.y -= this.velY;
           break;
+        case "s":
+          this.y += this.velY;
+          break;
       } 
     });
   }
+  //Draws the evil enemy
   draw() {
     ctx.beginPath();
     ctx.lineWidth = 3;
@@ -121,7 +127,7 @@ class EvilCircle extends Shape{
     ctx.arc(this.x, this.y, this.size, 0, 2 *Math.PI);
     ctx.stroke();
   }
-
+  //Checks if the evil enemy is going out of bounds(off the screen)
   checkBounds() {
     if((this.x + this.size) >= width) {
       this.x = -(this.size);
@@ -140,7 +146,7 @@ class EvilCircle extends Shape{
     }
 
   }
-
+  //Detects if the evil ball has collided with anyone
   collisionDetect() {
     for (const ball of balls) {
       if (ball.exists == true) {
@@ -151,7 +157,10 @@ class EvilCircle extends Shape{
         if(distance < this.size + ball.size) {
           // ball.color = this.color = randomRGB();
           ball.exists = false
-          paragraph.textContent
+          //Removes one from the good guys counter depending on if they collided with the evil enemy
+          goodguys = goodguys - 1
+          //Displays the current goodguys count
+          paragraph.textContent = `Ball count${goodguys}`
         }
       }
     }
@@ -188,6 +197,7 @@ while(balls.length < 25) {
   );
 
   balls.push(ball)
+  goodguys = goodguys + 1
 }
 
 // A loop that updates each ball, draws them and detects if any of them have collided
@@ -198,7 +208,7 @@ function loop() {
   
 
   ctx.fillRect(0, 0, width, height);
-
+  //Loops throught the list of 25 balls and creates, updates and collision detects for each of them
   for(const ball of balls) {
     if(ball.exists) {
       ball.draw();
@@ -207,7 +217,7 @@ function loop() {
     
   }
   }
-
+  //Draws the enemy ball once since there is only one enemy during the bouncing balls game
   evilEnemy.draw()
   evilEnemy.checkBounds()
   evilEnemy.collisionDetect()
@@ -216,5 +226,5 @@ function loop() {
 }
 
 
-
+//Rund the entire code
 loop();
