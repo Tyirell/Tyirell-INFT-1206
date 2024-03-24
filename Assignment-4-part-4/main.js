@@ -4,12 +4,13 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 //Selects the paragraph in the HTML document and allows editing of the text
+//Query is a DOM selector in this case this is my reference variable that allows me to keep track of what is currently listed in the paragraph field in the HTML
 const paragraph = document.querySelector("p")
 
 
 
 
-//Sets the cavas width and height
+//Sets the canvas width and height
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -39,6 +40,7 @@ class Shape {
 
 //Class for the ball
 class Ball extends Shape {
+  //To inherit properties correctly you have to list all properties in the constructor and then specify each one in the super within the constructor 
   constructor(x, y, velX, velY, color ,size, exists) {
     super(x, y, velX, velY)
     this.color = color;
@@ -53,7 +55,7 @@ class Ball extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 *Math.PI);
     ctx.fill();
   }
-  // Updates each ball to so they can move around the screen
+  // Updates each ball to so they can move around the screen(Dtetermines the velocity of each object)
   update() {
     if((this.x + this.size) >= width) {
       this.velX = -(this.velX);
