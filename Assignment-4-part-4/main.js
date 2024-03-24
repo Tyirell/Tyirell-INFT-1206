@@ -3,7 +3,6 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-//Reference Variable
 //Selects the paragraph in the HTML document and allows editing of the text
 const paragraph = document.querySelector("p")
 
